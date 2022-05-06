@@ -1,0 +1,28 @@
+server:
+  port: 8887
+  address: 0.0.0.0
+  tomcat:
+    accept-count: 150
+    threads:
+      max: 250
+publish:
+  mqtt:
+    host: tcp://124.222.94.149:1883
+    username: admin
+    password: 123312
+    cleansession: false
+    clientid: remote_client
+    default_topic: test
+    timeout: 100000
+    keepalive: 5
+    connectionTimeout: 3000
+spring:
+  datasource:
+    name: springdemo
+    url: jdbc:mysql://localhost:3306/lamp?serverTimezone=UTC
+    username: root
+    password: 123456  #Lipeihong0419{}??  123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.home.lamp.bean
